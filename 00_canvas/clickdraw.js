@@ -1,3 +1,7 @@
+//Jerry Ye
+//SoftDev2 pd02
+//K00 -- I See a Red Door...
+//2019-01-31
 var c = document.getElementById("slate");//canvas
 var ctx = c.getContext("2d");//converts canvas context to 2d
 var drawing = 'dot'//state variable used to track what user will be drawing
