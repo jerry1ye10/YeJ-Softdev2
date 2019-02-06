@@ -4,7 +4,7 @@
 //2019-02-06
 var radius = 5; //initial start radius
 var growthRate = 5; //growth rate; will be negative when circle is shrinking
-var requestID; //stores animation request later for cancelling
+var requestID = 0; //stores animation request later for cancelling
 var animate = false; //if animate is true then circle will grow and shrink
 
 var canvas = document.getElementById("playground"); //accesses canvas in html
@@ -19,6 +19,7 @@ var clear = function(){
 
 //constantly draws larger or smaller dot and clears it
 var drawDot = function(){
+  window.cancelAnimationFrame(requestID);
   if (animate){
     clear();//clear must be done to get visual effect shown
     ctx.beginPath();
