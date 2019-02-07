@@ -27,9 +27,9 @@ clear.addEventListener("click", function(e){
 // for drawing
 c.addEventListener("click", function(e){
   if (drawing == 'dot'){ //drawing ellipse
-    ctx.beginPath();
+    ctx.beginPath();//begins drawing path
     ctx.ellipse( e.offsetX, e.offsetY, 100, 100, 0, 0, 2 * Math.PI );
-    ctx.closePath();
+    ctx.closePath();//ends drawing path
     ctx.fill()
   }
   else{//drawing rectangle
