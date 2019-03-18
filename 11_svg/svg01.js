@@ -6,10 +6,12 @@
 var pic = document.getElementById("vimage"); //Canvas-like XML box
 var clear = document.getElementById("but_clear"); //Clear button
 var move = document.getElementById('move');
+var mys = document.getElementById('mystery');
 var drawCircle = true;
 var requestID = 0;
 var xVelocity = 1;
 var yVelocity = 1;
+changeColor = false
 
 
 pic.addEventListener( "click" , function(e) { //draws circles and lines between them
@@ -59,7 +61,7 @@ move.addEventListener("click", function(){
     requestID = window.requestAnimationFrame(mo);
     len = pic.children.length;
     for (var i = 0; i < len; i++){
-      c = pic.children[i]
+      c = pic.children[i];
       var xCor = Number(c.getAttribute("cx"));
       var yCor = Number(c.getAttribute("cy"));
       c.setAttribute("cx", xCor + c.xVelocity);
@@ -75,4 +77,25 @@ move.addEventListener("click", function(){
       }
   }
   mo();
+})
+
+mys.addEventListener("click", function(){
+  if (changeColor == false){
+    changeColor = true;
+  }
+  else{
+    changeColor = false;
+  }
+  if (changeColor){
+    for (var i = 0; i < len; i++){
+      c = pic.children[i];
+      c.setAttribute("fill", "blue");
+  }
+}
+  else {
+    for (var i = 0; i < len; i++){
+      c = pic.children[i];
+      c.setAttribute("fill", "red");
+  }
+}
 })
