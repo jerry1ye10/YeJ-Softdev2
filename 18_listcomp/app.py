@@ -1,3 +1,7 @@
+#Jerry Ye 
+#Softdev2 pd7
+#K18 -- Getting Clever with List Comprehensions
+#2019-04-16t
 def quicksort(L):
     if L == []:
         return []
