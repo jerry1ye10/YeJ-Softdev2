@@ -1,6 +1,7 @@
-
 #Team Bob - Simon Tsui, Jerry Ye
-
+#Softdev2 pd7
+#K19 -- Ready, Set, Math!
+#2019-04-17W
 
 arr1 = [1, 2, 3]
 arr2 = [2, 3, 4]
