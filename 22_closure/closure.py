@@ -4,7 +4,7 @@
 #2019-05-0
 def repeat(x):
     def re(num):
-	return x * num
+        return x * num
     return re
 
 print(repeat('cool')(3))
